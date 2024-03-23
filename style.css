@@ -250,16 +250,14 @@ footer {
     padding: 16px;
 }
 .c-offer__tile-button{
-    text-align: right;
-}
-.c-offer__tile-button button{
     cursor: pointer;
     background: #8254ff;
     color: #fff;
     border: 1px solid;
-    border-color: #8254ff;
     font-size: 16px;
     padding: 8px;
+    margin-left: auto;
+    width: 120px;
     border-radius: 30px;
 }
 @media (max-width: 768px) {
@@ -308,7 +306,6 @@ footer {
     background: #8254ff;
     color: #fff;
     border: 1px solid;
-    border-color: #8254ff;
     text-transform: uppercase;
 }
 .c-info__title{
