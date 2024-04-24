@@ -1,0 +1,27 @@
+.c-hero {
+    &__wrap {
+        width: 100%;
+        margin: auto;
+    }
+
+    &__image {
+        width: 100%;
+
+        @include mq($until: 'tablet') {
+            height: 430px !important;
+        }
+
+        @include mq($until: 'desktop') {
+            height: 500px;
+        }
+
+        height: 620px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 36px;
+        -webkit-box-shadow: -16px 24px 55px -10px rgba(97, 38, 139, 0.5);
+        -moz-box-shadow: -16px 24px 55px -10px rgba(97, 38, 139, 0.5);
+        box-shadow: -16px 24px 55px -10px rgba(97, 38, 139, 0.5);
+    }
+}

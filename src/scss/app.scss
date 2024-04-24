@@ -1,0 +1,15 @@
+//Settings 
+@import "~sass-mq/_mq.scss";
+@import './settings/_settings.config.scss';
+
+//Components 
+@import './components/component-hero';
+@import './components/component-header';
+@import './components/component-main-nav';
+
+//Elements
+@import './elements/elements.nav-toggle';
+@import './elements/elements.o-button';
+
+//Fonts
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
