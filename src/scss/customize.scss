@@ -5,3 +5,7 @@ body {
     height: 90%;
     min-height: 95vh;
 }
+.o-page {
+    max-height: 100vh; 
+    overflow-y: auto;
+}

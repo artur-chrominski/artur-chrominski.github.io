@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Lawenda</title>
     <link rel="stylesheet" href="/assets/css/main.css">
-    <script src="/assets/js/main.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta name="description" content="Odkryj uspokajające korzyści płynące z lawendy.">
 </head>
 
 <body>
@@ -14,7 +15,7 @@
         <div class="c-header__wrapper">
             <div class="c-header__logo">
                 <a href="#">
-                    <img class="js-logo" src="/design/images/logo-chroma.png" alt="MHR INWEST sp. z o.o." width="564"
+                    <img class="js-logo" src="/design/images/logo-chroma.png" alt="Lawenda" width="564"
                         height="266">
                 </a>
             </div>
@@ -32,13 +33,13 @@
             </div>
             <div class="c-header__socials">
                 <div class="c-header__toggle-button">
-                    <button href="#" title="Menu Nawigacji"
+                    <a href="#" title="Menu Nawigacji"
                         class="o-nav-toggle c-header__toggle-nav js-toggle-nav js-anchor-initialized"
                         data-cy="navigation-toggle">
                         <span class="o-nav-toggle__bar o-nav-toggle__bar--first"></span>
                         <span class="o-nav-toggle__bar o-nav-toggle__bar--middle"></span>
                         <span class="o-nav-toggle__bar o-nav-toggle__bar--last"></span>
-                    </button>
+                    </a>
                 </div>
                 <div class="c-header__button_wrap">
                     <a href="#" target="_blank" class="c-header__button-try">
@@ -56,19 +57,29 @@
             <div class="c-header__mobile-menu">
                 <div class="c-header__mobile-base">
                     <div class="c-header__mobile-content">
+                        <nav class="c-main-nav js-header-nav">
+                            <ul id="header_nav" class="c-main-nav__list">
+                                <li class="c-main-nav__item">
+                                    <a title="Kontakt" href="#" class="c-main-nav__link">Start</a>
+                                </li>
+                                <li class="c-main-nav__item">
+                                    <a title="Kontakt" href="#" class="c-main-nav__link">Kontakt</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-
-
-    <div class="o-page">
-        <section class="c-hero__wrap">
-            <div class="c-hero__image" style="background-image: url('/design/images/heroimage.png'); "></div>
-        </section>
+    <div class="o-page" data-scroll-container>
+        <div id="hero-section"></div> 
+        <div id="card-section"></div> 
+        <div id="footer-section"></div> 
     </div>
+    
+
+    <script src="/assets/js/main.js"></script>
 </body>
 
 </html>

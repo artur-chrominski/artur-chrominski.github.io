@@ -1,0 +1,43 @@
+.c-footer {
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    &__info {
+        h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        p {
+            color: #666;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+
+        .c-footer__social-link {
+            display: inline-block;
+            margin: 16px;
+            font-size: 32px;
+            color: #666; 
+
+            &:hover {
+                color: #333; 
+            }
+        }
+    }
+}

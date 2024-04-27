@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack --watch",
     "build": "webpack --mode production"
-},
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -21,6 +21,7 @@
     "style-loader": "^3.2.1"
   },
   "dependencies": {
+    "locomotive-scroll": "^4.1.4",
     "sass-mq": "^6.0.0"
   }
 }

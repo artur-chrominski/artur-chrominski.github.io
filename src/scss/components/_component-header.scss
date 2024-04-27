@@ -4,11 +4,20 @@
     z-index: 100;
     left: 0;
     right: 0;
-    height: $header-height;
+    height: $header-height; 
     display: flex;
     align-items: center;
     padding: 0 16px;
     background: white;
+    opacity: 1; 
+    transition: opacity 0.5s ease; 
+
+    body.is-page-scrolled & {
+        opacity: 0; 
+        visibility: hidden; 
+        transition: opacity 0.5s ease, visibility 0s linear 0.5s; 
+    }
+
     &__logo {
         flex: 1;
         z-index: 1;
@@ -88,7 +97,12 @@
     }
     &__mobile-active{
         display: flex;
+        @include mq($from: desktop){
+            display: none;
+        }
     }
-
+    &__mobile-content{
+        position: absolute;
+        top: 14%;
+    }
 }
-
