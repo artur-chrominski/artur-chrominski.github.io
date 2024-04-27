@@ -5,6 +5,7 @@ body {
     height: 90%;
     min-height: 95vh;
 }
-.o-page {
-    max-height: 100vh; 
+[data-scroll-container] {
+    min-height: 100vh;
+    position: relative;
 }

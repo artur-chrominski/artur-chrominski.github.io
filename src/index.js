@@ -2,6 +2,30 @@ import './scss/app.scss';
 import './scss/customize.scss';
 import LocomotiveScroll from 'locomotive-scroll';
 
+const scrollContainer = document.querySelector('[data-scroll-container]');
+
+if (scrollContainer) {
+    const scroll = new LocomotiveScroll({
+        el: scrollContainer,
+        smooth: true,
+        smoothMobile: true,
+        getDirection: true,
+        inertia: 0.4
+    });
+
+    let debounceTimeoutId;
+
+    scroll.on('scroll', (args) => {
+        clearTimeout(debounceTimeoutId);
+        debounceTimeoutId = setTimeout(() => {
+            if (args.scroll.y > 100) {
+                document.body.classList.add('is-page-scrolled');
+            } else {
+                document.body.classList.remove('is-page-scrolled');
+            }
+        }, 100);
+    });
+}
 
 function loadHTML(url, containerId) {
     const xhr = new XMLHttpRequest();
@@ -31,28 +55,3 @@ function loadHTML(url, containerId) {
         });
     }
 })();
-
-const scrollContainer = document.querySelector('[data-scroll-container]');
-
-if (scrollContainer) {
-    const scroll = new LocomotiveScroll({
-        el: scrollContainer,
-        smooth: true,
-        smoothMobile: false,
-        getDirection: true,
-        inertia: 0.4
-    });
-
-    let debounceTimeoutId;
-
-    scroll.on('scroll', (args) => {
-        clearTimeout(debounceTimeoutId);
-        debounceTimeoutId = setTimeout(() => {
-            if (args.scroll.y > 100) {
-                document.body.classList.add('is-page-scrolled');
-            } else {
-                document.body.classList.remove('is-page-scrolled');
-            }
-        }, 100);
-    });
-}
